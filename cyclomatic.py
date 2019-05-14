@@ -1,13 +1,3 @@
-import datetime
-
-
-# function for generating the current timestamp
-def current_timestamp():
-    date_today = datetime.datetime.now()
-    print("Current Date/Time: ")
-    return date_today
-
-
 # switch case function adds 1 to cyclomatic complexity total == 3
 def switch(case):
     return {
@@ -24,7 +14,6 @@ def switch(case):
 #   ***   main driver   ***   Cyclomatic Complexity   ***   Total == 1   ***  #
 print("You will enter a letter which the program will use to map to a number.")
 print("That number will be used to determine how many times a for loop iterates.")
-print("Each time the loop iterates it will print a current time stamp.")
 
 # get user input for switch case
 case_input = str(input("Enter A, B, or C: "))
@@ -38,5 +27,5 @@ else:
     num_iterations = int((switch(case_input)))
 
 #   *** FOR LOOP ADDS 1 to Cyclomatic Complexity ***   Total == 4   ***  #
-for i in range(num_iterations): print(str(current_timestamp()))
+for i in range(num_iterations): print("Remaining iterations: " + str(num_iterations-(i+1)))
 # This program has a cyclomatic complexity of 4 #
